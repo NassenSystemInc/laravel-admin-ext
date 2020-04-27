@@ -1,0 +1,34 @@
+{
+    "name": "laravel-admin-ext/redismanager",
+    "description": "Redis manager for laravel-admin",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "info",
+            "email": "info@nassen.co.jp"
+        }
+    ],
+    "minimum-stability": "dev",
+	"require" : {
+		"php" : ">=7.2.0",
+		"encore/laravel-admin" : "~1.7",
+		"predis/predis" : "~1.0"
+	},
+	"require-dev" : {
+		"phpunit/phpunit" : "~6.0",
+		"laravel/laravel" : "~6.0"
+	},
+	"autoload" : {
+		"psr-4" : {
+			"Encore\\Admin\\RedisManager\\" : "src/"
+		}
+	},
+	"extra" : {
+		"laravel" : {
+			"providers" : [
+				"Encore\\Admin\\RedisManager\\RedisManagerServiceProvider"
+			]
+		}
+	}
+}
