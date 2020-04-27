@@ -1,5 +1,5 @@
 {
-    "name": "laravel-admin-ext/redismanager",
+    "name": "NassenSystemInc/laravel-admin-redis-manager",
     "description": "Redis manager for laravel-admin",
     "type": "library",
     "license": "MIT",
