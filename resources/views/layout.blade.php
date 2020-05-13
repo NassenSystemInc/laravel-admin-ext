@@ -74,6 +74,20 @@
                             <div id="collapse{{ $part }}" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
                                 <div class="box-body no-padding no-border">
                                     <div class="table-responsive">
+				        <table class="table table-striped no-margin">
+                                            @foreach($detail as $key => $value)
+                                                <tr>
+                                                    <td>{{ $key }}</td>
+                                                    <td>
+                                                        @if(is_array($value))
+                                                            <pre><code>{{ json_encode($value, JSON_PRETTY_PRINT) }}</code></pre>
+                                                        @else
+                                                            <span class="label label-primary">{{ $value }}</span>
+                                                        @endif
+                                                    </td>
+                                                </tr>
+                                            @endforeach
+                                        </table>
                                     </div>
                                 </div>
                             </div>
